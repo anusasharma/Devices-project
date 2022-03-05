@@ -7,7 +7,8 @@ import {HttpClient} from "@angular/common/http";
 })
 export class DevicesService {
 
-  private apiURL = "http://localhost:3000/";
+  // private apiURL = "http://localhost:3000/";
+  private apiURL = "https://anusa-devices-backend.herokuapp.com/";
   constructor(private httpClient: HttpClient) { }
 
   getDevicesList(): Observable<any> {
