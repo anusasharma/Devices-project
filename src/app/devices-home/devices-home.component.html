@@ -12,15 +12,17 @@
   </div>
 
 
+  <!--Using a loader before getting the details from API-->
   <div *ngIf="!isLoaded">
     <app-devices-list-loading></app-devices-list-loading>
   </div>
 
+  <!--The details are loaded and showing the list of the devices-->
   <div *ngIf="isLoaded">
     <div (click)="openModal(device)" *ngFor="let device of devicesList;let i = index"
          class="py-3 mb-2 bg-light" data-backdrop="static" data-bs-target="#deviceInfoModel" data-bs-toggle="modal"
          data-keyboard="false">
-      <div class="row">
+      <div class="row c-point">
         <div class="col-lg-2 text-center">
           <i *ngIf="i==0 || i==1" class="fa fa-mobile-phone fa-3x"></i>
           <i *ngIf="i==2" class="fa fa-laptop fa-3x"></i>
@@ -41,7 +43,7 @@
 
 </div>
 
-
+<!--Modal for the more details of the device-->
 <div aria-hidden="true" aria-labelledby="deviceInfoModelLabel" class="modal fade" data-bs-backdrop="static"
      id="deviceInfoModel"
      tabindex="-1">

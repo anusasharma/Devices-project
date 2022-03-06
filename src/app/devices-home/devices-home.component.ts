@@ -30,6 +30,7 @@ export class DevicesHomeComponent implements OnInit {
 
   }
 
+  //Getting the devices list from the API
   getDevices() {
     this.isLoaded = false
     this.deviceService.getDevicesList().subscribe(res => {
